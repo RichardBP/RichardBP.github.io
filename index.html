@@ -102,6 +102,25 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
+	
+	<p id="demo"></p>
+	
+	<script>
+		var x = document.getElementById("demo");
+
+		function getLocation() {
+		  if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		  } else { 
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		  }
+		}
+
+		function showPosition(position) {
+		  x.innerHTML = "Latitude: " + position.coords.latitude + 
+		  "<br>Longitude: " + position.coords.longitude;
+		}
+</script>
 
 <link type="text/css" rel="stylesheet" href="https://abp.brightpattern.com/clientweb/chat-client-v4/css/form.css">
 <script type="text/javascript">
