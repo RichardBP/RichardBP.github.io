@@ -105,7 +105,10 @@
 	
 	<p id="demo"></p>
 	
-	<script>
+
+<link type="text/css" rel="stylesheet" href="https://abp.brightpattern.com/clientweb/chat-client-v4/css/form.css">
+<script type="text/javascript">
+
 		var x = document.getElementById("demo");
 
 		function getLocation() {
@@ -116,14 +119,6 @@
 		  }
 		}
 
-		function showPosition(position) {
-		  x.innerHTML = "Latitude: " + position.coords.latitude + 
-		  "<br>Longitude: " + position.coords.longitude;
-		}
-</script>
-
-<link type="text/css" rel="stylesheet" href="https://abp.brightpattern.com/clientweb/chat-client-v4/css/form.css">
-<script type="text/javascript">
     SERVICE_PATTERN_CHAT_CONFIG = {
         appId: 'e9571e712dfb4b77b6d0992fe61dd272',
         apiUrl: 'https://abp.brightpattern.com/clientweb/api/v1',
