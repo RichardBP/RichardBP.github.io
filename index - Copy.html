@@ -108,11 +108,27 @@
 
 <link type="text/css" rel="stylesheet" href="https://abp.brightpattern.com/clientweb/chat-client-v4/css/form.css">
 <script type="text/javascript">
+
+		var x = document.getElementById("demo");
+
+		function getLocation() {
+		  if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		  } else { 
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		  }
+		}
+
     SERVICE_PATTERN_CHAT_CONFIG = {
         appId: 'e9571e712dfb4b77b6d0992fe61dd272',
         apiUrl: 'https://abp.brightpattern.com/clientweb/api/v1',
         tenantUrl: 'abp.brightpattern.com',
-        chatPath: 'https://abp.brightpattern.com/clientweb/chat-client-v4/'
+        chatPath: 'https://abp.brightpattern.com/clientweb/chat-client-v4/',
+		togetherJS_enabled : true,
+		parameters: {
+
+		}
+	
 
         /*        
          // Default customer data, it can be collected on current site's context
@@ -120,10 +136,12 @@
          last_name: '',
          email: '',
          phone_number: ''
+		 cuipaddress: request.getRemoteAddr(),
+		 cuipaddress: '<%=request.getRemoteAddr()%>',
  		*/
     };
 </script>
-<script src="https://abp.brightpattern.com/clientweb/chat-client-v4/js/init.js"></script> 
+<script src="https://abp.brightpattern.com/clientweb/chat-client-v4/js/init.js"></script>
 
 <!-- You have to put this piece of JavaScript code into your web page
 Note: Use <!DOCTYPE html> on the page where snippet located for better rendering
